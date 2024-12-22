@@ -29,10 +29,10 @@ pipeline {
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Something is wrong with ${env.BUILD_URL}"
        }
-       failure {
+       success {
         mail to: 'test.aqa4@gmail.com',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
+             subject: "Successful Pipeline: ${currentBuild.fullDisplayName}",
+             body: "All good with ${env.BUILD_URL}"
        }
     }
 }
